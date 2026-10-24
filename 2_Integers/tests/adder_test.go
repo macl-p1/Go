@@ -6,7 +6,7 @@ import (
 	add "example.com/prog"
 )
 
-func testadder(t *testing.T){
+func Testadder(t *testing.T){
 	got := add.Adder(2,2)
 	want := 4
 

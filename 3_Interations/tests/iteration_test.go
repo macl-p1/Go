@@ -7,7 +7,7 @@ import (
 	iteration "example.com/prog"
 )
 
-func testIterate(t *testing.T){
+func TestIterate(t *testing.T){
 	got := iteration.Iterate("a",10)
 	want := "aaaaaaaaaa"
 
