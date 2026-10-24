@@ -1,9 +1,11 @@
 package iteration
 
-func Iterate(c string) string {
-	var s string
-	for i := 0; i < 5; i++ {
-		s += c
+import "strings"
+
+func Iterate(c string,x int) string {
+	var s strings.Builder
+	for i := 0; i < x; i++ {
+		s.WriteString(c)
 	}
-	return s
+	return s.String()
 }

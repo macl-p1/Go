@@ -8,8 +8,8 @@ import (
 )
 
 func testIterate(t *testing.T){
-	got := iteration.Iterate("a")
-	want := "aaaaa"
+	got := iteration.Iterate("a",10)
+	want := "aaaaaaaaaa"
 
 	if got != want {
 		t.Errorf("got %q want %q",got,want)
@@ -18,7 +18,7 @@ func testIterate(t *testing.T){
 
 func BenchmarkIterate(b *testing.B) {
 	for b.Loop(){
-			iteration.Iterate("a")
+			iteration.Iterate("a",10)
 	}
 	fmt.Println(b.N)
 }
